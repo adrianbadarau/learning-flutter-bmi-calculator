@@ -1,6 +1,8 @@
 import 'package:bmi_calculator/config/constants.dart';
 import 'package:bmi_calculator/config/enums.dart';
 import 'package:bmi_calculator/pages/results.dart';
+import 'package:bmi_calculator/services/bmi_calculator_service.dart';
+import 'package:bmi_calculator/widgets/navigate_button.dart';
 import 'package:bmi_calculator/widgets/panel.dart';
 import 'package:bmi_calculator/widgets/round_icon_button.dart';
 import 'package:bmi_calculator/widgets/sex_picker.dart';
@@ -177,18 +179,10 @@ class _InputPageState extends State<InputPage> {
               ))
             ],
           )),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/results');
-            },
-            child: Container(
-              color: kBOTTOM_CONTAINER_COLOR,
-              margin: EdgeInsets.only(top: 10),
-              width: double.infinity,
-              height: kBOTTOM_CONTAINER_HEIGHT,
-              child: Center(
-                  child: Text('Calculate', style: TextStyle(fontSize: 24))),
-            ),
+          NavigateButton(
+            buttonText: 'Calculate',
+            navigationLocation: '/results',
+            data: {'height': height, 'weight': weight},
           )
         ],
       ),

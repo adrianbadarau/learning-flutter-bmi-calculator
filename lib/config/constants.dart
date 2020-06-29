@@ -6,3 +6,9 @@ const kBOTTOM_CONTAINER_HEIGHT = 80.0;
 const kBOTTOM_CONTAINER_COLOR = Color(0xffeb1555);
 const kICON_TEXT_STYLE = TextStyle(fontSize: 18, color: Color(0xff8d8e98));
 const kNumberTextStyle = TextStyle(fontSize: 50, fontWeight: FontWeight.w900);
+
+const kResultTextStyle = TextStyle(
+  color: Color(0xFF24D876),
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold
+);
